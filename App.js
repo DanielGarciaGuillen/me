@@ -68,8 +68,30 @@ export default class App extends Component {
       <View style={styles.container}>
         <Swiper
           style={styles.wrapper}
+          height={200}
+          horizontal={false}
+          showsPagination={false}
+        >
+          <View style={styles.slide1}>
+            <Image
+              resizeMode="stretch"
+              style={styles.image}
+              source={require("./assets/img/top/top.png")}
+            />
+          </View>
+          <View style={styles.slide2}>
+            <Text style={styles.text}>Beautiful</Text>
+          </View>
+          <View style={styles.slide3}>
+            <Text style={styles.text}>And simple</Text>
+          </View>
+        </Swiper>
+
+        <Swiper
+          style={styles.wrapper}
           showsButtons={true}
           showsPagination={false}
+          height={240}
           onMomentumScrollEnd={(e, state, context) =>
             console.log("index:", state.index)
           }
@@ -84,16 +106,14 @@ export default class App extends Component {
                 marginTop: 3,
                 marginBottom: 3
               }}
+              paginationStyle={{
+                marginTop: 100
+              }}
             />
           }
         >
           {/*  SLIDE 0 */}
-          <View
-            style={styles.slide}
-            title={
-              <Text numberOfLines={1}>Aussie tourist dies at Bali hotel</Text>
-            }
-          >
+          <View style={styles.slide}>
             <Image
               resizeMode="stretch"
               style={styles.image}
@@ -101,29 +121,20 @@ export default class App extends Component {
             />
           </View>
           {/*  SLIDE 1 */}
-          <View
-            style={styles.slide1}
-            title={
-              <Text numberOfLines={1}>Aussie tourist dies at Bali hotel</Text>
-            }
-          >
+          <View style={styles.slide1}>
             <Text> Slide 1 </Text>
           </View>
           {/*  SLIDE 2 */}
-          <View
-            style={styles.slide2}
-            title={
-              <Text numberOfLines={1}>Big lie behind Nine’s new show</Text>
-            }
-          />
+          <View style={styles.slide2}>
+            <Image
+              resizeMode="stretch"
+              style={styles.image}
+              source={require("./assets/img/bottom/bottom.png")}
+            />
+          </View>
 
           {/*  SLIDE 3*/}
-          <View
-            style={styles.slide3}
-            title={
-              <Text numberOfLines={1}>Aussie tourist dies at Bali hotel</Text>
-            }
-          >
+          <View style={styles.slide3}>
             <Text> Slide 3 </Text>
           </View>
         </Swiper>
