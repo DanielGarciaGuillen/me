@@ -3,6 +3,9 @@ import { Text, View, Dimensions, Image } from "react-native";
 import Swiper from "react-native-swiper";
 import { Font } from "expo";
 const { width } = Dimensions.get("window");
+
+import { Icon, Text } from "react-native-elements";
+
 const styles = {
   container: {
     flex: 1
@@ -68,30 +71,8 @@ export default class App extends Component {
       <View style={styles.container}>
         <Swiper
           style={styles.wrapper}
-          height={200}
-          horizontal={false}
           showsPagination={false}
-        >
-          <View style={styles.slide1}>
-            <Image
-              resizeMode="stretch"
-              style={styles.image}
-              source={require("./assets/img/top/top.png")}
-            />
-          </View>
-          <View style={styles.slide2}>
-            <Text style={styles.text}>Beautiful</Text>
-          </View>
-          <View style={styles.slide3}>
-            <Text style={styles.text}>And simple</Text>
-          </View>
-        </Swiper>
-
-        <Swiper
-          style={styles.wrapper}
-          showsButtons={true}
-          showsPagination={false}
-          height={240}
+          height={150}
           onMomentumScrollEnd={(e, state, context) =>
             console.log("index:", state.index)
           }
@@ -107,18 +88,18 @@ export default class App extends Component {
                 marginBottom: 3
               }}
               paginationStyle={{
-                marginTop: 100
+                marginTop: 500
               }}
             />
           }
         >
           {/*  SLIDE 0 */}
           <View style={styles.slide}>
-            <Image
-              resizeMode="stretch"
-              style={styles.image}
-              source={require("./assets/img/me.jpg")}
-            />
+            <Text h3> Soft Sell </Text>
+            <Icon name="arrow-left" type="font-awesome" color="#f50" />
+            <Icon name="arrow-right" type="font-awesome" color="#f50" />
+
+            <Text h3>Hard Sell </Text>
           </View>
           {/*  SLIDE 1 */}
           <View style={styles.slide1}>
@@ -141,4 +122,12 @@ export default class App extends Component {
       </View>
     );
   }
+}
+
+{
+  /* <Image
+              resizeMode="stretch"
+              style={styles.image}
+              source={require("./assets/img/me.jpg")}
+            /> */
 }
