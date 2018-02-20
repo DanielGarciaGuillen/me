@@ -4,13 +4,23 @@ import Swiper from "react-native-swiper";
 import { Font } from "expo";
 const { width } = Dimensions.get("window");
 
-import { Icon, Text } from "react-native-elements";
+import { Icon } from "react-native-elements";
 
 const styles = {
   container: {
     flex: 1
   },
-
+  maintext: {
+    fontSize: 19
+  },
+  arrowleft: {
+    marginLeft: 5,
+    fontSize: 25
+  },
+  arrowright: {
+    marginLeft: 90,
+    fontSize: 25
+  },
   wrapper: {},
 
   slide: {
@@ -94,16 +104,93 @@ export default class App extends Component {
           }
         >
           {/*  SLIDE 0 */}
-          <View style={styles.slide}>
-            <Text h3> Soft Sell </Text>
-            <Icon name="arrow-left" type="font-awesome" color="#f50" />
-            <Icon name="arrow-right" type="font-awesome" color="#f50" />
+          <View
+            style={{
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <View
+              style={{
+                width: 300,
+                height: 500,
+                backgroundColor: "powderblue",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <Text
+                style={{
+                  textAlign: "center",
+                  paddingBottom: 20,
+                  fontSize: 20
+                }}
+              >
+                {" "}
+                Hey! Daniel Garcia here.
+              </Text>
+              <Image
+                source={require("./assets/img/me.jpg")}
+                style={{
+                  width: 100,
+                  height: 100,
+                  borderRadius: 100,
+                  borderColor: "pink",
+                  borderWidth: 2
+                }}
+              />
 
-            <Text h3>Hard Sell </Text>
+              <Text
+                style={{
+                  textAlign: "center",
+                  paddingTop: 20,
+                  fontSize: 20
+                }}
+              >
+                {" "}
+                I enjoy doing Front-End Dev.
+              </Text>
+              <Text
+                style={{
+                  textAlign: "center",
+                  paddingTop: 20,
+                  fontSize: 20
+                }}
+              >
+                {" "}
+                I am specially interested in React and React Native.
+              </Text>
+              <Text
+                style={{
+                  textAlign: "center",
+                  paddingTop: 20,
+                  fontSize: 20
+                }}
+              >
+                Feel free to contact me at daniel@danielgguillen.com
+              </Text>
+            </View>
           </View>
+
           {/*  SLIDE 1 */}
-          <View style={styles.slide1}>
-            <Text> Slide 1 </Text>
+          <View style={styles.slide}>
+            <Text style={styles.arrowleft}> Soft Sell </Text>
+            <Icon
+              name="arrow-left"
+              style={styles.arrowleft}
+              maintext
+              type="font-awesome"
+              color="#f50"
+            />
+            <Text style={styles.arrowright}>Hard Sell </Text>
+            <Icon
+              name="arrow-right"
+              style={styles.arrowright}
+              type="font-awesome"
+              color="#f50"
+            />
           </View>
           {/*  SLIDE 2 */}
           <View style={styles.slide2}>
