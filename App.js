@@ -1,17 +1,23 @@
 import React, { Component } from "react";
-import { Text, View, Dimensions, Image } from "react-native";
+import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
+
 import Swiper from "react-native-swiper";
 import { Font } from "expo";
 const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
-const styles = {
+import Slide0 from "./components/slide0";
+
+const styles = StyleSheet.create({
   container: {
     flex: 1
   },
   maintext: {
-    fontSize: 19
+    textAlign: "center",
+    paddingTop: 20,
+    fontSize: 20,
+    color: "white"
   },
   arrowleft: {
     marginLeft: 5,
@@ -33,21 +39,21 @@ const styles = {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#9DD6EB"
+    backgroundColor: "black"
   },
 
   slide2: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F9FBFB"
+    backgroundColor: "black"
   },
 
   slide3: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#E3E6EB"
+    backgroundColor: "black"
   },
 
   text: {
@@ -59,10 +65,10 @@ const styles = {
   },
 
   image: {
-    width,
+    width: 5,
     flex: 1
   }
-};
+});
 
 export default class App extends Component {
   state = {
@@ -103,6 +109,8 @@ export default class App extends Component {
             />
           }
         >
+          {/*  SLIDE -1  */}
+          <Slide0 />
           {/*  SLIDE 0 */}
           <View
             style={{
@@ -114,9 +122,7 @@ export default class App extends Component {
           >
             <View
               style={{
-                width: 300,
-                height: 500,
-                backgroundColor: "powderblue",
+                backgroundColor: "black",
                 justifyContent: "center",
                 alignItems: "center"
               }}
@@ -125,7 +131,8 @@ export default class App extends Component {
                 style={{
                   textAlign: "center",
                   paddingBottom: 20,
-                  fontSize: 20
+                  fontSize: 20,
+                  color: "white"
                 }}
               >
                 {" "}
