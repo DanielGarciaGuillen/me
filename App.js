@@ -8,6 +8,7 @@ const { width } = Dimensions.get("window");
 import { Icon } from "react-native-elements";
 
 import Slide0 from "./components/slide0";
+import Slide1 from "./components/slide1";
 
 const styles = StyleSheet.create({
   container: {
@@ -27,47 +28,7 @@ const styles = StyleSheet.create({
     marginLeft: 90,
     fontSize: 25
   },
-  wrapper: {},
-
-  slide: {
-    flex: 1,
-    justifyContent: "center",
-    backgroundColor: "transparent"
-  },
-
-  slide1: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "black"
-  },
-
-  slide2: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "black"
-  },
-
-  slide3: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "black"
-  },
-
-  text: {
-    color: "#fff",
-    fontSize: 30,
-    fontWeight: "bold",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-
-  image: {
-    width: 5,
-    flex: 1
-  }
+  wrapper: {}
 });
 
 export default class App extends Component {
@@ -112,75 +73,7 @@ export default class App extends Component {
           {/*  SLIDE -1  */}
           <Slide0 />
           {/*  SLIDE 0 */}
-          <View
-            style={{
-              flex: 1,
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <View
-              style={{
-                backgroundColor: "black",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <Text
-                style={{
-                  textAlign: "center",
-                  paddingBottom: 20,
-                  fontSize: 20,
-                  color: "white"
-                }}
-              >
-                {" "}
-                Hey! Daniel Garcia here.
-              </Text>
-              <Image
-                source={require("./assets/img/me.jpg")}
-                style={{
-                  width: 100,
-                  height: 100,
-                  borderRadius: 100,
-                  borderColor: "pink",
-                  borderWidth: 2
-                }}
-              />
-
-              <Text
-                style={{
-                  textAlign: "center",
-                  paddingTop: 20,
-                  fontSize: 20
-                }}
-              >
-                {" "}
-                I enjoy doing Front-End Dev.
-              </Text>
-              <Text
-                style={{
-                  textAlign: "center",
-                  paddingTop: 20,
-                  fontSize: 20
-                }}
-              >
-                {" "}
-                I am specially interested in React and React Native.
-              </Text>
-              <Text
-                style={{
-                  textAlign: "center",
-                  paddingTop: 20,
-                  fontSize: 20
-                }}
-              >
-                Feel free to contact me at daniel@danielgguillen.com
-              </Text>
-            </View>
-          </View>
-
+          <Slide1 />
           {/*  SLIDE 1 */}
           <View style={styles.slide}>
             <Text style={styles.arrowleft}> Soft Sell </Text>
@@ -200,18 +93,8 @@ export default class App extends Component {
             />
           </View>
           {/*  SLIDE 2 */}
-          <View style={styles.slide2}>
-            <Image
-              resizeMode="stretch"
-              style={styles.image}
-              source={require("./assets/img/bottom/bottom.png")}
-            />
-          </View>
 
           {/*  SLIDE 3*/}
-          <View style={styles.slide3}>
-            <Text> Slide 3 </Text>
-          </View>
         </Swiper>
       </View>
     );
