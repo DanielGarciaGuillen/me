@@ -9,6 +9,10 @@ import { Icon } from "react-native-elements";
 
 import Slide0 from "./components/slide0";
 import Slide1 from "./components/slide1";
+import Slide2 from "./components/slide2";
+import Slide3 from "./components/slide3";
+import Slide4 from "./components/slide4";
+import Slide5 from "./components/slide5";
 
 const styles = StyleSheet.create({
   container: {
@@ -75,23 +79,7 @@ export default class App extends Component {
           {/*  SLIDE 0 */}
           <Slide1 />
           {/*  SLIDE 1 */}
-          <View style={styles.slide}>
-            <Text style={styles.arrowleft}> Soft Sell </Text>
-            <Icon
-              name="arrow-left"
-              style={styles.arrowleft}
-              maintext
-              type="font-awesome"
-              color="#f50"
-            />
-            <Text style={styles.arrowright}>Hard Sell </Text>
-            <Icon
-              name="arrow-right"
-              style={styles.arrowright}
-              type="font-awesome"
-              color="#f50"
-            />
-          </View>
+
           {/*  SLIDE 2 */}
 
           {/*  SLIDE 3*/}
