@@ -76,13 +76,6 @@ export default class App extends Component {
         >
           {/*  SLIDE -1  */}
           <Slide0 />
-          {/*  SLIDE 0 */}
-          <Slide1 />
-          {/*  SLIDE 1 */}
-
-          {/*  SLIDE 2 */}
-
-          {/*  SLIDE 3*/}
         </Swiper>
       </View>
     );
