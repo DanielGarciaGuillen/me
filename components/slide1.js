@@ -28,25 +28,25 @@ const styles = StyleSheet.create({
 export default class Slide1 extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.maintext}> Hey! Daniel Garcia here.</Text>
+      <View style={s.container}>
+        <Text style={s.maintext}> Hey! Daniel Garcia here.</Text>
         <Image
           source={require("../assets/img/me.jpg")}
           style={{
-            width: 100,
-            height: 100,
+            width: 150,
+            height: 150,
             borderRadius: 100,
-            borderColor: "pink",
-            borderWidth: 2
+            borderColor: "white",
+            borderWidth: 4
           }}
         />
 
-        <Text style={styles.maintext}> I enjoy doing Front-End Dev.</Text>
-        <Text style={styles.maintext}>
+        <Text style={s.maintext}> I enjoy doing Front-End Dev.</Text>
+        <Text style={s.maintext}>
           {" "}
           I am specially interested in React and React Native.
         </Text>
-        <Text style={styles.maintext}>
+        <Text style={s.maintext}>
           Feel free to contact me at daniel@danielgguillen.com
         </Text>
       </View>

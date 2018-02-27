@@ -8,21 +8,7 @@ const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "black"
-  },
-  maintext: {
-    textAlign: "center",
-    paddingTop: 20,
-    fontSize: 20,
-    color: "white"
-  }
-});
+const styles = StyleSheet.create({});
 
 export default class Slide5 extends Component {
   render() {
