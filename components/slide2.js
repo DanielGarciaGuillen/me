@@ -14,27 +14,19 @@ export default class Slide2 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.maintext}> Hola!</Text>
-        <Text style={styles.maintext}>Hola!I'm Daniel Garcia.</Text>
-        <Image
-          source={require("../assets/img/me.jpg")}
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: 100,
-            borderColor: "pink",
-            borderWidth: 2
-          }}
-        />
-
-        <Text style={styles.maintext}> I enjoy doing Front-End Dev.</Text>
         <Text style={styles.maintext}>
           {" "}
-          I am specially interested in React and React Native.
+          If you are looking for a React Developer.
         </Text>
+        <Text style={styles.maintext}>I am looking to hustle.</Text>
+
+        <Text style={styles.maintext}> I may not know everything.</Text>
         <Text style={styles.maintext}>
-          Feel free to contact me at daniel@danielgguillen.com
+          {" "}
+          But I have all the skills to figure out.
         </Text>
+        <Text style={styles.maintext}> I am...</Text>
+        <Text style={styles.h1}>Relentlessly resourceful.</Text>
       </View>
     );
   }

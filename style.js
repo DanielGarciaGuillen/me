@@ -18,5 +18,12 @@ module.exports = StyleSheet.create({
     fontSize: 20,
     paddingBottom: 20,
     color: "white"
+  },
+  h1: {
+    textAlign: "center",
+    paddingTop: 10,
+    fontSize: 30,
+    paddingBottom: 20,
+    color: "white"
   }
 });
