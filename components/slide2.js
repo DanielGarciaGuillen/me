@@ -13,20 +13,18 @@ const styles = StyleSheet.create({});
 export default class Slide2 extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.maintext}>
-          {" "}
-          If you are looking for a React Developer.
-        </Text>
-        <Text style={styles.maintext}>I am looking to hustle.</Text>
+      <View style={s.container}>
+        <Text style={s.maintext}> If you are looking for a</Text>
+        <Text style={s.maintext}> React Developer.</Text>
+        <Text style={s.maintext}>I am looking to hustle.</Text>
 
-        <Text style={styles.maintext}> I may not know everything.</Text>
-        <Text style={styles.maintext}>
+        <Text style={s.maintext}> I may not know everything.</Text>
+        <Text style={s.maintext}>
           {" "}
           But I have all the skills to figure out.
         </Text>
-        <Text style={styles.maintext}> I am...</Text>
-        <Text style={styles.h1}>Relentlessly resourceful.</Text>
+        <Text style={s.maintext}> I am...</Text>
+        <Text style={s.h1}>Relentlessly resourceful.</Text>
       </View>
     );
   }

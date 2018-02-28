@@ -22,8 +22,18 @@ module.exports = StyleSheet.create({
   h1: {
     textAlign: "center",
     paddingTop: 10,
-    fontSize: 30,
+    fontSize: 40,
     paddingBottom: 20,
     color: "white"
+  },
+  moreselly: {
+    fontSize: 17,
+    color: "white",
+    justifyContent: "flex-end"
+  },
+  lessselly: {
+    fontSize: 17,
+    color: "white",
+    alignItems: "flex-start"
   }
 });

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
+var s = require("./style");
 
 import Swiper from "react-native-swiper";
 import { Font } from "expo";
@@ -17,22 +18,7 @@ import Slide5 from "./components/slide5";
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  },
-  maintext: {
-    textAlign: "center",
-    paddingTop: 20,
-    fontSize: 20,
-    color: "white"
-  },
-  arrowleft: {
-    marginLeft: 5,
-    fontSize: 25
-  },
-  arrowright: {
-    marginLeft: 90,
-    fontSize: 25
-  },
-  wrapper: {}
+  }
 });
 
 export default class App extends Component {
@@ -53,26 +39,17 @@ export default class App extends Component {
         <Swiper
           style={styles.wrapper}
           showsPagination={false}
-          height={150}
           onMomentumScrollEnd={(e, state, context) =>
             console.log("index:", state.index)
           }
-          dot={
-            <View
-              style={{
-                width: 5,
-                height: 5,
-                borderRadius: 4,
-                marginLeft: 3,
-                marginRight: 3,
-                marginTop: 3,
-                marginBottom: 3
-              }}
-              paginationStyle={{
-                marginTop: 500
-              }}
-            />
-          }
+          loop={false}
+          showsButtons={true}
+          nextButton={<Text style={s.moreselly}>More Selly{"\n"}👉</Text>}
+          prevButton={<Text style={s.lessselly}>Less Selly{"\n"}👈</Text>}
+          buttonWrapperStyle={{
+            paddingTop: 535,
+            flex: 1
+          }}
         >
           {/*  SLIDE -1  */}
           <Slide0 />
@@ -82,12 +59,4 @@ export default class App extends Component {
       </View>
     );
   }
-}
-
-{
-  /* <Image
-              resizeMode="stretch"
-              style={styles.image}
-              source={require("./assets/img/me.jpg")}
-            /> */
 }
