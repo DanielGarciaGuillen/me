@@ -55,6 +55,7 @@ export default class App extends Component {
           <Slide0 />
           <Slide1 />
           <Slide2 />
+          <Slide3 />
         </Swiper>
       </View>
     );
