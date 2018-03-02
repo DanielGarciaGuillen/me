@@ -35,5 +35,12 @@ module.exports = StyleSheet.create({
     fontSize: 17,
     color: "white",
     alignItems: "flex-start"
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    borderColor: "white",
+    borderWidth: 4
   }
 });
