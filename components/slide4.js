@@ -3,37 +3,39 @@ import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
 var s = require("../style");
 
 import Swiper from "react-native-swiper";
-import { Font } from "expo";
+
 const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
-const styles = StyleSheet.create({});
+export default class Slide3 extends Component {
+  constructor(props) {
+    super(props);
 
-export default class Slide4 extends Component {
+    this.state = { timer: 0, color: "#FF0000" };
+    setInterval(() => {
+      this.setState({
+        timer: this.state.timer + 1,
+        color: this.state.timer % 2 == 0 ? "#FF0000" : "#0000FF"
+      });
+    }, 1000);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.maintext}> Hey! Daniel Garcia here.</Text>
-        <Image
-          source={require("../assets/img/me.jpg")}
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: 100,
-            borderColor: "pink",
-            borderWidth: 2
-          }}
-        />
+      <View style={s.container}>
+        <View style={{ backgroundColor: this.state.color }}>
+          <Text style={s.maintext}> If you need a Front End Developer</Text>
 
-        <Text style={styles.maintext}> I enjoy doing Front-End Dev.</Text>
-        <Text style={styles.maintext}>
-          {" "}
-          I am specially interested in React and React Native.
-        </Text>
-        <Text style={styles.maintext}>
-          Feel free to contact me at daniel@danielgguillen.com
-        </Text>
+          <Text style={s.maintext}> Look no more.</Text>
+          <Text style={s.maintext}>
+            I rather be doing React and React Native development than anything
+            else.
+          </Text>
+          <Text style={s.maintext}>
+            Contact me now at daniel@danielgguillen.com!
+          </Text>
+        </View>
       </View>
     );
   }

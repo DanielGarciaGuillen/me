@@ -29,12 +29,16 @@ module.exports = StyleSheet.create({
   moreselly: {
     fontSize: 17,
     color: "white",
-    justifyContent: "flex-end"
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
   },
   lessselly: {
     fontSize: 17,
-    color: "white",
-    alignItems: "flex-start"
+    color: "white"
+  },
+  handleft: {
+    fontSize: 30
   },
   image: {
     width: 150,

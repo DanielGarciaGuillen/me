@@ -44,7 +44,12 @@ export default class App extends Component {
           }
           loop={false}
           showsButtons={true}
-          nextButton={<Text style={s.moreselly}>More Selly{"\n"}👉</Text>}
+          nextButton={
+            <Text style={s.moreselly}>
+              More Selly{"\n"}
+              <Text style={s.handleft}>👉</Text>
+            </Text>
+          }
           prevButton={<Text style={s.lessselly}>Less Selly{"\n"}👈</Text>}
           buttonWrapperStyle={{
             paddingTop: 535,
@@ -56,6 +61,7 @@ export default class App extends Component {
           <Slide1 />
           <Slide2 />
           <Slide3 />
+          <Slide4 />
         </Swiper>
       </View>
     );
