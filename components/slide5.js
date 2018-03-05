@@ -14,12 +14,12 @@ class FadeInView extends React.Component {
         this.state.fadeAnim, // The animated value to drive
         {
           toValue: 1, // Animate to opacity: 1 (opaque)
-          duration: 1000 // Make it take a while
+          duration: 10000 // Make it take a while
         },
         this.state.changeSize, // The animated value to drive
         {
           toValue: 100, // Animate to opacity: 1 (opaque)
-          duration: 1000 // Make it take a while
+          duration: 10000 // Make it take a while
         }
       )
     ).start(); // Starts the animation
@@ -39,9 +39,10 @@ class FadeInView extends React.Component {
             {
               translateY: this.state.fadeAnim.interpolate({
                 inputRange: [0, 1],
-                outputRange: [150, 0] // 0 : 150, 0.5 : 75, 1 : 0
+                outputRange: [150, -500]
               })
-            }
+            },
+            { skewX: "45deg" }
           ]
         }}
       >
