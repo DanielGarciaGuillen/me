@@ -43,6 +43,7 @@ export default class App extends Component {
             console.log("index:", state.index)
           }
           loop={false}
+          index={5}
           showsButtons={true}
           nextButton={
             <Text style={s.moreselly}>
@@ -62,6 +63,7 @@ export default class App extends Component {
           <Slide2 />
           <Slide3 />
           <Slide4 />
+          <Slide5 />
         </Swiper>
       </View>
     );

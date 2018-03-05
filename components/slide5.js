@@ -1,39 +1,68 @@
-import React, { Component } from "react";
-import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
-var s = require("../style");
+import React from "react";
+import { Animated, Text, View } from "react-native";
 
-import Swiper from "react-native-swiper";
-import { Font } from "expo";
-const { width } = Dimensions.get("window");
+class FadeInView extends React.Component {
+  state = {
+    fadeAnim: new Animated.Value(0), // Initial value for opacity: 0
+    changeSize: new Animated.Value(0)
+  };
 
-import { Icon } from "react-native-elements";
+  componentDidMount() {
+    Animated.loop(
+      Animated.timing(
+        // Animate over time
+        this.state.fadeAnim, // The animated value to drive
+        {
+          toValue: 1, // Animate to opacity: 1 (opaque)
+          duration: 1000 // Make it take a while
+        },
+        this.state.changeSize, // The animated value to drive
+        {
+          toValue: 100, // Animate to opacity: 1 (opaque)
+          duration: 1000 // Make it take a while
+        }
+      )
+    ).start(); // Starts the animation
+  }
 
-const styles = StyleSheet.create({});
+  render() {
+    let { fadeAnim } = this.state;
+    let { changeSize } = this.state;
+    console.log(this.state.borderRadius);
 
-export default class Slide5 extends Component {
+    return (
+      <Animated.View // Special animatable View
+        style={{
+          ...this.props.style,
+          opacity: fadeAnim,
+          transform: [
+            {
+              translateY: this.state.fadeAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: [150, 0] // 0 : 150, 0.5 : 75, 1 : 0
+              })
+            }
+          ]
+        }}
+      >
+        {this.props.children}
+      </Animated.View>
+    );
+  }
+}
+
+// You can then use your `FadeInView` in place of a `View` in your components:
+export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.maintext}> Hey! Daniel Garcia here.</Text>
-        <Image
-          source={require("../assets/img/me.jpg")}
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: 100,
-            borderColor: "pink",
-            borderWidth: 2
-          }}
-        />
-
-        <Text style={styles.maintext}> I enjoy doing Front-End Dev.</Text>
-        <Text style={styles.maintext}>
-          {" "}
-          I am specially interested in React and React Native.
-        </Text>
-        <Text style={styles.maintext}>
-          Feel free to contact me at daniel@danielgguillen.com
-        </Text>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <FadeInView
+          style={{ width: 250, height: 50, backgroundColor: "powderblue" }}
+        >
+          <Text style={{ fontSize: 28, textAlign: "center", margin: 10 }}>
+            Hire Me!!!
+          </Text>
+        </FadeInView>
       </View>
     );
   }
