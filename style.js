@@ -46,5 +46,9 @@ module.exports = StyleSheet.create({
     borderRadius: 100,
     borderColor: "white",
     borderWidth: 4
+  },
+  rocket: {
+    width: 150,
+    height: 950
   }
 });

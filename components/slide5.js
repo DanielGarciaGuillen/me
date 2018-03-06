@@ -1,5 +1,6 @@
 import React from "react";
-import { Animated, Text, View } from "react-native";
+import { Animated, Text, View, Image } from "react-native";
+var s = require("../style");
 
 class FadeInView extends React.Component {
   state = {
@@ -39,10 +40,9 @@ class FadeInView extends React.Component {
             {
               translateY: this.state.fadeAnim.interpolate({
                 inputRange: [0, 1],
-                outputRange: [150, -500]
+                outputRange: [350, -500]
               })
-            },
-            { skewX: "45deg" }
+            }
           ]
         }}
       >
@@ -57,12 +57,8 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <FadeInView
-          style={{ width: 250, height: 50, backgroundColor: "powderblue" }}
-        >
-          <Text style={{ fontSize: 28, textAlign: "center", margin: 10 }}>
-            Hire Me!!!
-          </Text>
+        <FadeInView>
+          <Image source={require("../assets/img/FH.png")} style={s.rocket} />
         </FadeInView>
       </View>
     );
