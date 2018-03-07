@@ -48,7 +48,8 @@ module.exports = StyleSheet.create({
     borderWidth: 4
   },
   rocket: {
-    width: 150,
-    height: 950
+    width: 250,
+    height: 1150,
+    marginLeft: 220
   }
 });

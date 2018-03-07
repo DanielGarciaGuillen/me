@@ -28,8 +28,6 @@ class FadeInView extends React.Component {
 
   render() {
     let { fadeAnim } = this.state;
-    let { changeSize } = this.state;
-    console.log(this.state.borderRadius);
 
     return (
       <Animated.View // Special animatable View
@@ -40,7 +38,7 @@ class FadeInView extends React.Component {
             {
               translateY: this.state.fadeAnim.interpolate({
                 inputRange: [0, 1],
-                outputRange: [350, -500]
+                outputRange: [1200, -1200]
               })
             }
           ]
