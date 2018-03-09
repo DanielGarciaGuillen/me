@@ -10,12 +10,14 @@ const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
-import Slide0 from "./components/slide0";
-import Slide1 from "./components/slide1";
-import Slide2 from "./components/slide2";
-import Slide3 from "./components/slide3";
-import Slide4 from "./components/slide4";
-import Slide5 from "./components/slide5";
+import Slide7 from "./components/less/slide7";
+import Slide8 from "./components/less/slide8";
+import Slide9 from "./components/less/slide9";
+import Slide from "./components/slide";
+import Slide10 from "./components/more/slide10";
+import Slide11 from "./components/more/slide11";
+import Slide12 from "./components/more/slide12";
+import Slide13 from "./components/more/slide13";
 
 const styles = StyleSheet.create({
   container: {
@@ -74,13 +76,14 @@ export default class App extends Component {
             paddingTop: 535
           }}
         >
-          {/*  SLIDE -1  */}
-          <Slide0 />
-          <Slide1 />
-          <Slide2 />
-          <Slide3 />
-          <Slide4 />
-          <Slide5 />
+          <Slide7 />
+          <Slide8 />
+          <Slide9 />
+          <Slide />
+          <Slide10 />
+          <Slide11 />
+          <Slide12 />
+          <Slide13 />
         </Swiper>
       </View>
     );

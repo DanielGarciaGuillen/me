@@ -8,12 +8,12 @@ const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
-export default class Slide1 extends Component {
+export default class Slide extends Component {
   render() {
     return (
       <View style={s.container}>
-        <Text style={s.maintext}> Hello!</Text>
-        <Text style={s.maintext}>Daniel Garcia here.</Text>
+        <Text style={s.maintext}> Hey!</Text>
+        <Text style={s.maintext}>Daniel here.</Text>
         <Image source={require("../assets/img/me.jpg")} style={s.image} />
 
         <Text style={s.maintext}> I am a Front-End Dev.</Text>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, Text, View, Image } from "react-native";
-var s = require("../style");
+var s = require("../../style");
 
 class FadeInView extends React.Component {
   state = {
@@ -51,12 +51,12 @@ class FadeInView extends React.Component {
 }
 
 // You can then use your `FadeInView` in place of a `View` in your components:
-export default class App extends React.Component {
+export default class Slide13 extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <FadeInView>
-          <Image source={require("../assets/img/FH.png")} style={s.rocket} />
+          <Image source={require("../../assets/img/FH.png")} style={s.rocket} />
         </FadeInView>
       </View>
     );

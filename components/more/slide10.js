@@ -4,13 +4,13 @@ import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
 import Swiper from "react-native-swiper";
 import { Font } from "expo";
 const { width } = Dimensions.get("window");
-var s = require("../style");
+var s = require("../../style");
 
 import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({});
 
-export default class Slide2 extends Component {
+export default class Slide10 extends Component {
   render() {
     return (
       <View style={s.container}>
@@ -23,7 +23,7 @@ export default class Slide2 extends Component {
           {" "}
           But I have all the skills to figure out.
         </Text>
-        <Text style={s.maintext}> I am...</Text>
+        <Text style={s.maintext}> I am</Text>
         <Text style={s.h1}>Relentlessly resourceful.</Text>
       </View>
     );
