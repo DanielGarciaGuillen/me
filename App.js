@@ -6,6 +6,8 @@ import Swiper from "react-native-swiper";
 import { Font } from "expo";
 const { width } = Dimensions.get("window");
 
+/* import * as firebase from "firebase"; */
+
 import { Icon } from "react-native-elements";
 
 import Slide0 from "./components/slide0";
@@ -20,6 +22,17 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
+
+/* var config = {
+  apiKey: "AIzaSyCADTPWMNm49TMP_Ki-_Som7KvMEa8qbKY",
+  authDomain: "hired-ce6d4.firebaseapp.com",
+  databaseURL: "https://hired-ce6d4.firebaseio.com",
+  projectId: "hired-ce6d4",
+  storageBucket: "hired-ce6d4.appspot.com",
+  messagingSenderId: "109733197181"
+};
+
+firebase.initializeApp(config); */
 
 export default class App extends Component {
   state = {
@@ -43,18 +56,22 @@ export default class App extends Component {
             console.log("index:", state.index)
           }
           loop={false}
-          index={5}
+          index={1}
           showsButtons={true}
           nextButton={
-            <Text style={s.moreselly}>
-              More Selly{"\n"}
+            <View style={s.buttonNext}>
               <Text style={s.handleft}>👉</Text>
-            </Text>
+              <Text style={s.buttontext}>More Selly{"\n"}</Text>
+            </View>
           }
-          prevButton={<Text style={s.lessselly}>Less Selly{"\n"}👈</Text>}
+          prevButton={
+            <View style={s.buttonNext}>
+              <Text style={s.handleft}>👈</Text>
+              <Text style={s.buttontext}>Less Selly{"\n"}</Text>
+            </View>
+          }
           buttonWrapperStyle={{
-            paddingTop: 535,
-            flex: 1
+            paddingTop: 535
           }}
         >
           {/*  SLIDE -1  */}

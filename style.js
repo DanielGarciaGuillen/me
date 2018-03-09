@@ -14,31 +14,32 @@ module.exports = StyleSheet.create({
   },
   maintext: {
     textAlign: "center",
-    paddingTop: 20,
+    paddingTop: 10,
     fontSize: 20,
-    paddingBottom: 20,
+    paddingBottom: 10,
     color: "white"
   },
   h1: {
     textAlign: "center",
     paddingTop: 10,
     fontSize: 40,
-    paddingBottom: 20,
+    paddingBottom: 10,
     color: "white"
   },
-  moreselly: {
+  buttonNext: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end"
+  },
+  buttontext: {
     fontSize: 17,
     color: "white",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  lessselly: {
-    fontSize: 17,
-    color: "white"
+    alignSelf: "center"
   },
   handleft: {
-    fontSize: 30
+    fontSize: 25,
+    color: "white",
+    alignSelf: "center"
   },
   image: {
     width: 150,

@@ -23,19 +23,25 @@ export default class Slide3 extends Component {
 
   render() {
     return (
-      <View style={s.container}>
-        <View style={{ backgroundColor: this.state.color }}>
-          <Text style={s.maintext}> If you need a Front End Developer</Text>
+      <View
+        style={{
+          backgroundColor: this.state.color,
+          flex: 1,
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <Text style={s.maintext}> If you need a Front End Developer</Text>
 
-          <Text style={s.maintext}> Look no more.</Text>
-          <Text style={s.maintext}>
-            I rather be doing React and React Native development than anything
-            else.
-          </Text>
-          <Text style={s.maintext}>
-            Contact me now at daniel@danielgguillen.com!
-          </Text>
-        </View>
+        <Text style={s.maintext}> Look no more.</Text>
+        <Text style={s.maintext}>
+          I rather be doing React and React Native development than anything
+          else.
+        </Text>
+        <Text style={s.maintext}>
+          Contact me now at daniel@danielgguillen.com!
+        </Text>
       </View>
     );
   }

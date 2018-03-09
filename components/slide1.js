@@ -12,17 +12,17 @@ export default class Slide1 extends Component {
   render() {
     return (
       <View style={s.container}>
-        <Text style={s.maintext}> Hey! Daniel Garcia here.</Text>
+        <Text style={s.maintext}> Hello!</Text>
+        <Text style={s.maintext}>Daniel Garcia here.</Text>
         <Image source={require("../assets/img/me.jpg")} style={s.image} />
 
-        <Text style={s.maintext}> I enjoy doing Front-End Dev.</Text>
+        <Text style={s.maintext}> I am a Front-End Dev.</Text>
         <Text style={s.maintext}>
           {" "}
-          I am specially interested in React and React Native.
+          I like to create beatiful design a performance optimize React/React
+          Native apps.
         </Text>
-        <Text style={s.maintext}>
-          Feel free to contact me at daniel@danielgguillen.com
-        </Text>
+        <Text style={s.maintext}>Contact me at daniel@danielgguillen.com</Text>
       </View>
     );
   }
