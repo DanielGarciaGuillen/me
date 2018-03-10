@@ -22,7 +22,9 @@ export default class Slide extends Component {
           I like to create beatiful design a performance optimize React/React
           Native apps.
         </Text>
-        <Text style={s.maintext}>Contact me at daniel@danielgguillen.com</Text>
+        <Text style={s.maintext}>
+          You can give me a call at{"\n"} 613-371-46-74
+        </Text>
       </View>
     );
   }

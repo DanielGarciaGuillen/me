@@ -10,6 +10,7 @@ const { width } = Dimensions.get("window");
 
 import { Icon } from "react-native-elements";
 
+import Slide6 from "./components/less/slide6";
 import Slide7 from "./components/less/slide7";
 import Slide8 from "./components/less/slide8";
 import Slide9 from "./components/less/slide9";
@@ -58,7 +59,7 @@ export default class App extends Component {
             console.log("index:", state.index)
           }
           loop={false}
-          index={1}
+          index={4}
           showsButtons={true}
           nextButton={
             <View style={s.buttonNext}>
@@ -76,6 +77,7 @@ export default class App extends Component {
             paddingTop: 535
           }}
         >
+          <Slide6 />
           <Slide7 />
           <Slide8 />
           <Slide9 />

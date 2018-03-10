@@ -22,9 +22,10 @@ module.exports = StyleSheet.create({
   h1: {
     textAlign: "center",
     paddingTop: 10,
-    fontSize: 40,
+    fontSize: 25,
     paddingBottom: 10,
-    color: "white"
+    color: "white",
+    fontWeight: "bold"
   },
   buttonNext: {
     display: "flex",
@@ -42,11 +43,11 @@ module.exports = StyleSheet.create({
     alignSelf: "center"
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 130,
+    height: 130,
     borderRadius: 100,
     borderColor: "white",
-    borderWidth: 4
+    borderWidth: 2
   },
   rocket: {
     width: 250,

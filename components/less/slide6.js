@@ -10,15 +10,14 @@ import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({});
 
-export default class Slide9 extends Component {
+export default class Slide6 extends Component {
   render() {
     return (
       <View style={s.container}>
-        <Text style={s.maintext}> Hey!</Text>
-
-        <Text style={s.maintext}>I do Front-End.</Text>
-        <Text style={s.maintext}>I enjoy doing {"\n"}Websites & Apps.</Text>
-        <Text style={s.maintext}>Do you want to talk?</Text>
+        <Text style={s.maintext}>
+         So yeah,{"\n"}
+          I am a Front End Dev.{"\n"} What's up?
+        </Text>
       </View>
     );
   }
